@@ -2,7 +2,7 @@
 An LLM-specific engineering language that outperforms Markdown and JavaScript
 옵티 프롬프트 프로토타입:
 
-이 프롬프트 작문법은 계층, 참/거짓, 주석의 요소로 나뉩니다.
+이 프롬프트 작문법은 계층, 참/거짓, 추가 카테고리의 요소로 나뉩니다.
 
 #카테고리
 ##하위 카테고리
