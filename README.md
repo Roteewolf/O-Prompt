@@ -1,6 +1,9 @@
 # Opti-Prompt
 An LLM-specific engineering language that outperforms Markdown and JavaScript
-옵티 프롬프트 프로토타입:
+옵티 프롬프트 프로토타입
+최초 공개일: 2025/01/10
+https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's Rp Prompt Mild 1.0' 의 일부 설정을 적는 것에 활용 한 것이 최초 공개.
+이후 지속적으로 업그레이드 중.
 
 이 프롬프트 작문법은 계층, 참/거짓, 추가 카테고리의 요소로 나뉩니다.
 
