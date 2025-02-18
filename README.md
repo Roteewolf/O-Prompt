@@ -74,9 +74,11 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 이는 #목표 카테고리에서 주로 설정하면 좋으나, 다른 카테고리에서도 설정이 가능합니다. 
 {Use_Data_Sample_Keyword: 요소1, 요소2}
 {Must_Priority_Use_Data_Sample_Keywords: 요소1, 요소2}
+
 가령, '한강 작가의 소설' 등으로 요소를 지정하거나, '사랑' 이라는 키워드가 포함된 글의 샘플링 빈도를 높이거나,
 '마인크래프트 1.12.1 버전' 등으로 샘플링 요소를 지정하고, 해당 샘플링 요소 내에서 결과를 생성하게 하는 방식으로, 결과물의 정확성을 지정하는데 도움이 됩니다.
-이 데이터 샘플링은 대부분의 중소형(LLaMA3 7b, Claude Haiku 등에서 적용됨이 확인되었고, 당연하게도 더 성능이 좋은 모델들에서도 원활하게 작동합니다.
+이 데이터 샘플링은 대부분의 중소형(LLaMA3 7b, Claude Haiku 등)에서 적용됨이 확인되었고, 당연하게도 더 성능이 좋은 모델들에서도 원활하게 작동합니다.
+
 예시:
 {Must_Priority_Use_Data_Sample_Keywords: 마인크래프트1.12.1, 스크립트}
 {DO NOT: 다른 버전의 데이터 참조}
