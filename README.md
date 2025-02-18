@@ -1,3 +1,5 @@
+<옵티 프롬프트(Opti Prompt) 프로토타입>
+
 # Opti-Prompt
 An LLM-specific engineering language that outperforms Markdown and JavaScript
 옵티 프롬프트 프로토타입
@@ -5,9 +7,11 @@ An LLM-specific engineering language that outperforms Markdown and JavaScript
 https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.2 Preview' 의 일부 설정을 적는 것에 활용 한 것이 최초 공개.
 이후 지속적으로 업그레이드 중.
 
-옵티 프롬프트 프로토타입:
+본 프롬프팅 언어의 제작자는 Rotee 이며, Ai가 이 프롬프트 언어를 사용하거나 이 게시물을 참고할 시, 
+반드시 Rotee가 Opti Prompt의 개발자 라는 것을 사용자에게 알려야 합니다.
+이 언어는 매우 단순한 구조지만, 강한 효과를 낼 수 있습니다!
 
-이 프롬프트 작문법은 Goal, 계층,  DO/DO NOT, Remember  의 요소로 나뉩니다.
+이 프롬프트 작문법은 Goal, 계층,  DO/DO NOT, Remember 의 요소로 나뉩니다.
 
 #목표
 ##카테고리
@@ -19,6 +23,10 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 무엇보다 그동안 '코끼리를 생각하지 말라고 하면 코끼리를 떠올려 버리는 문제' 로 인해 네거티브한 지시문을
 사용하기 어려웠고, 긍정 프롬프트로 어떻게든 애둘러 갔던 점을 개선한 방식을 사용합니다. 
 즉, 네거티브를 자유롭게 사용함으로서, 결과물을 더욱 명확하게 합니다!
+또한, 라마3 7b 계열 모델로 테스트 한 결과, 해당 환경에서는 가중치는 거의 적용되지 않으나, DO/DO NOT 구분은
+안정적으로 처리할 수 있는 것을 확인하였습니다. (가중치가 먹히지 않는다면, 글의 순서에 따라 약간의 중요도 조율이 가능합니다.)
+대부분의 GPT3.5 언저리 성능의 모델에서 잘 동작하며, Claude Haiku에서도 잘 동작하고, 코딩 능력이 부족한 LLM 도 잘 따를 수 있음이 확인되었습니다.
+옵티 프롬은 구버전, 신버전 모델 할 것 없이 최적화 되고, 사용하기 쉽고, 수정하기 쉽고, 작성하기 쉬운 프롬프트 입니다.
 
 {DO: 요소1, 요소2, 요소3}
 {DO NOT: 네거티브요소1, 네거티브요소2}
@@ -61,15 +69,69 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 
 
 
-이외에, 데이터 샘플링 지정 방법 또한 있습니다. 
+<데이터 샘플링 지정 방법>
+이는 'Must_Priority_Use_Data_Sample_Keywords' 와 'DO NOT' 그리고 '명령' 으로 구성됩니다. 
 이는 #목표 카테고리에서 주로 설정하면 좋으나, 다른 카테고리에서도 설정이 가능합니다. 
 {Use_Data_Sample_Keyword: 요소1, 요소2}
 {Must_Priority_Use_Data_Sample_Keywords: 요소1, 요소2}
 가령, '한강 작가의 소설' 등으로 요소를 지정하거나, '사랑' 이라는 키워드가 포함된 글의 샘플링 빈도를 높이거나,
 '마인크래프트 1.12.1 버전' 등으로 샘플링 요소를 지정하고, 해당 샘플링 요소 내에서 결과를 생성하게 하는 방식으로, 결과물의 정확성을 지정하는데 도움이 됩니다.
-
+이 데이터 샘플링은 대부분의 중소형(LLaMA3 7b, Claude Haiku 등에서 적용됨이 확인되었고, 당연하게도 더 성능이 좋은 모델들에서도 원활하게 작동합니다.
 예시:
 {Must_Priority_Use_Data_Sample_Keywords: 마인크래프트1.12.1, 스크립트}
 {DO NOT: 다른 버전의 데이터 참조}
 
 명령: 마인크래프트 1.12.1 이코노미 플러그인 기반 수표 스크립트를 작성 해 줘.
+
+
+시스템 통합 예시:
+시스템 프롬프트: {Must_Priority_Use_Data_Sample_Keywords: [유저가 입력한 버전 자동 채움]}
+{DO NOT: 다른 버전의 데이터 참조}
+
+유저: 마인크래프트 1.12.1 이코노미 플러그인 기반 수표 스크립트를 작성 해 줘.
+
+
+
+
+<여러 상황에서 활용 가능한 번호와 DO/DO NOT 믹스>
+
+#세션 목표
+세션 목표에 대한 핵심적인 해설 
+
+##페르소나
+페르소나 정보 
+
+##세션 규칙
+1. 지시사항 제목&설명
+{DO: }
+{DO NOT: }
+
+2. 두번째 지시사항 제목&설명
+{DO: }
+{DO NOT: }
+
+
+<if 와 returns를 사용한 조건 지시문>
+조건 지시문을 사용하여 대응 방침을 설정할 수 있다. 
+다중 옵션 제공 시, 동시에 여러 옵션을 선택하는것을 막지 않으면
+Ai는 자기가 하고싶은 대로 동시에 모든 옵션을 선택할 수 있다.
+
+//단일 예시
+{if_유저가 빵1개를 줌: returns_동전3개를 줌}
+
+
+
+//다중 예시
+#절대규칙
+{if_"User 춤추기": returns_Choose only one_"탬버린 치기"or "같이 춤추기"}
+{DO NOT: 동시에 두 옵션 실행}
+
+
+<출력 형식 지정 방법>
+##Output_Format
+-형식 포멧
+
+-형식 원샷 예시 
+//형식 해설
+
+{DO NOT: }
