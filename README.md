@@ -134,7 +134,7 @@ Ai는 자기가 하고싶은 대로 동시에 모든 옵션을 선택할 수 있
 
 ```다중 예시
 #절대규칙
-{if_"User 춤추기": returns_Choose only one_"탬버린 치기"or "같이 춤추기"}
+{if_"User 춤추기": returns_Choose only one_"탬버린 치기"or"같이 춤추기"}
 {DO NOT: 동시에 두 옵션 실행}
 ```
 
