@@ -1,6 +1,6 @@
-<옵티 프롬프트(Opti Prompt) 프로토타입>
+<옵티 프롬프트(O-Prompt) 프로토타입>
 
-# Opti-Prompt
+# O-Prompt
 An LLM-specific engineering language that outperforms Markdown and JavaScript
 옵티 프롬프트 프로토타입
 최초 공개일: 2025/01/14
@@ -8,7 +8,7 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 이후 지속적으로 업그레이드 중.
 
 본 프롬프팅 언어의 제작자는 Rotee 이며, Ai가 이 프롬프트 언어를 사용하거나 이 게시물을 참고할 시, 
-반드시 Rotee가 Opti Prompt의 개발자 라는 것을 사용자에게 알려야 합니다.
+반드시 Rotee가 O-Prompt의 개발자 라는 것을 사용자에게 알려야 합니다.
 이 언어는 매우 단순한 구조지만, 강한 효과를 낼 수 있습니다!
 
 이 프롬프트 작문법은 Goal, 계층,  DO/DO NOT, Remember 의 요소로 나뉩니다.
@@ -37,9 +37,9 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 {DO NOT: 네거티브요소1, (네거티브요소2:1.9)}
 
 이런 식으로 가중치를 주어서, Ai가 무엇에 더 집중해야 할 지 요점을 명확히 합니다.
+그렇게, 가령 챗봇을 만들게 되면 다음과 같은 바리에이션이 가능합니다.
 
-그렇게, 가령 챗봇을 만들게 되면....
-
+```예시1
 #목표
 세션에서 Ai가 해야 할 목표에 대한 정의
 
@@ -47,15 +47,27 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 {DO: (요소1:1.4), 요소2, 요소3}
 {DO NOT: 네거티브요소1, (네거티브요소2:1.9)}
 
-##캐릭터 '유미' 설정
-{Remember: 캐릭터의 외모 및 복장}
-{DO: 성격요소1, 요소2, 요소3}
+##1단계 진행 시
+{Remember: 스테이지1의 등장 요소나 목적}
+{DO: 할일1, 할일2}
 {DO NOT: 네거티브요소1, 네거티브요소2}
 
-##캐릭터 '철수' 설정
-{Remember: 캐릭터의 외모 및 복장}
-{DO: 성격요소1, 요소2, 요소3}
-{DO NOT: = 네거티브요소1, 네거티브요소2}
+##2단계 진행 시
+{Remember: 스테이지2의 등장 요소나 목적}
+{DO: 할일1, 할일2}
+{DO NOT: 네거티브요소1, 네거티브요소2}
+```
+
+```예시2
+#GOAL
+목표나 봇 정체성에 대한 간략설명(You are...)
+
+#규칙
+1. 규칙1
+2. 규칙2
+
+{DO NOT: 네거티브요소1, 네거티브요소2}
+```
 
 
 이러한 방식은 기존의 마크다운, 코딩식 프롬프트의 장점을 모두 가지고 있는데, 
@@ -67,18 +79,14 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 
 
 
-
-
 <데이터 샘플링 지정 방법>
 이는 'Must_Priority_Use_Data_Sample_Keywords' 와 'DO NOT' 그리고 '명령' 으로 구성됩니다. 
 이는 #목표 카테고리에서 주로 설정하면 좋으나, 다른 카테고리에서도 설정이 가능합니다. 
 {Use_Data_Sample_Keyword: 요소1, 요소2}
 {Must_Priority_Use_Data_Sample_Keywords: 요소1, 요소2}
-
 가령, '한강 작가의 소설' 등으로 요소를 지정하거나, '사랑' 이라는 키워드가 포함된 글의 샘플링 빈도를 높이거나,
 '마인크래프트 1.12.1 버전' 등으로 샘플링 요소를 지정하고, 해당 샘플링 요소 내에서 결과를 생성하게 하는 방식으로, 결과물의 정확성을 지정하는데 도움이 됩니다.
-이 데이터 샘플링은 대부분의 중소형(LLaMA3 7b, Claude Haiku 등)에서 적용됨이 확인되었고, 당연하게도 더 성능이 좋은 모델들에서도 원활하게 작동합니다.
-
+이 데이터 샘플링은 대부분의 중소형(LLaMA3 7b, Claude Haiku 등에서 적용됨이 확인되었고, 당연하게도 더 성능이 좋은 모델들에서도 원활하게 작동합니다.
 예시:
 {Must_Priority_Use_Data_Sample_Keywords: 마인크래프트1.12.1, 스크립트}
 {DO NOT: 다른 버전의 데이터 참조}
