@@ -104,7 +104,7 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 
 
 <여러 상황에서 활용 가능한 번호와 DO/DO NOT 믹스>
-
+```
 #세션 목표
 세션 목표에 대한 핵심적인 해설 
 
@@ -119,25 +119,28 @@ https://github.com/Roteewolf/Rotee-s-RP-prompt 에서 'Rotee's RP Prompt Mild 1.
 2. 두번째 지시사항 제목&설명
 {DO: }
 {DO NOT: }
-
+```
 
 <if 와 returns를 사용한 조건 지시문>
 조건 지시문을 사용하여 대응 방침을 설정할 수 있다. 
 다중 옵션 제공 시, 동시에 여러 옵션을 선택하는것을 막지 않으면
 Ai는 자기가 하고싶은 대로 동시에 모든 옵션을 선택할 수 있다.
 
-//단일 예시
+```단일 예시
 {if_유저가 빵1개를 줌: returns_동전3개를 줌}
+```
 
 
 
-//다중 예시
+```다중 예시
 #절대규칙
 {if_"User 춤추기": returns_Choose only one_"탬버린 치기"or "같이 춤추기"}
 {DO NOT: 동시에 두 옵션 실행}
+```
 
 
 <출력 형식 지정 방법>
+```
 ##Output_Format
 -형식 포멧
 
@@ -145,3 +148,4 @@ Ai는 자기가 하고싶은 대로 동시에 모든 옵션을 선택할 수 있
 //형식 해설
 
 {DO NOT: }
+```
