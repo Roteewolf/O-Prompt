@@ -52,7 +52,7 @@ Use this as the top-level directive to ensure strict behavioral control over the
 | `DO` | Include / enforce | ✅ Excellent |
 | `DO NOT` | Strict exclusion | ✅ Excellent (better than `NOT`) |
 | `MUST` | Hard requirement | ✅ |
-| `Use_Data_Sample_Keyword` | Loose sampling control | ✅ |
+| `Use_Data_Sample_Keyword` | sampling control | ✅ |
 | `Remember` | Contextual memory | ✅ |
 | `Output_Format` | Response structure control | ✅ |
 | `if_`, `if_condition` | Conditional logic | ✅ |
@@ -83,23 +83,23 @@ Use this as the top-level directive to ensure strict behavioral control over the
 </details>
 
 ---
-
 ## 5. Syntax Rules: Avoiding Interpretation Conflict
 
-> Avoid more than two semantic units in a single instruction block.
+> Avoid using the specific combination `MUST DO NOT` in the same instruction block.
+> 
+> While `MUST` and `DO NOT` can each be effective on their own, combining them directly causes confusion in how the model parses semantic intent.
 > 
 > ❌ Problematic:
 > ```
-> {must do not: ...}
+> {MUST DO NOT: ...}
 > ```
-> → May confuse `do` with either `must` or `not`
+> → Model may become uncertain whether `DO` belongs to `MUST` or `NOT`, leading to unstable behavior.
 > 
 > ✅ Recommended:
 > ```
 > # Absolute Priority Rule
 > {DO NOT: ...}
 > ```
-
 ---
 
 ## 6. Experimental Keywords (Under Testing)
