@@ -52,7 +52,7 @@ Use this as the top-level directive to ensure strict behavioral control over the
 | `DO` | Include / enforce | ✅ Excellent |
 | `DO NOT` | Strict exclusion | ✅ Excellent (better than `NOT`) |
 | `MUST` | Hard requirement | ✅ |
-| `Use_Data_Sample_Keyword` | sampling control | ✅ |
+| `Use_Data_Sample_Keyword` | sampling control; allows direct selection from internal examples and compact list-based control | ✅ |
 | `Remember` | Contextual memory | ✅ |
 | `Output_Format` | Response structure control | ✅ |
 | `if_`, `if_condition` | Conditional logic | ✅ |
@@ -83,6 +83,7 @@ Use this as the top-level directive to ensure strict behavioral control over the
 </details>
 
 ---
+
 ## 5. Syntax Rules: Avoiding Interpretation Conflict
 
 > Avoid using the specific combination `MUST DO NOT` in the same instruction block.
@@ -100,6 +101,16 @@ Use this as the top-level directive to ensure strict behavioral control over the
 > # Absolute Priority Rule
 > {DO NOT: ...}
 > ```
+> {must do not: ...}
+> ```
+> → May confuse `do` with either `must` or `not`
+> 
+> ✅ Recommended:
+> ```
+> # Absolute Priority Rule
+> {DO NOT: ...}
+> ```
+
 ---
 
 ## 6. Experimental Keywords (Under Testing)
@@ -132,8 +143,66 @@ Use this as the top-level directive to ensure strict behavioral control over the
 
 ---
 
+## 9. Examples
+
+<details>
+<summary>✅ Click to reveal practical examples</summary>
+
+### 9.1 Persona Setting Example
+```prompt
+# Session Persona Setting
+name: Runa
+goal: To provide useful information to the user.
+personality: Kind, professional and helpful, meticulous, realistic, cynical;
+---
+{DO NOT: Provide incorrect information, speak assumptions as facts, make hasty conclusions}
+```
+*Description*: This example demonstrates how to set a chatbot's persona. The chatbot named 'Runa' aims to provide useful information to users and is defined to have a kind and professional personality. Additionally, the 'DO NOT' directive specifies behaviors to avoid, such as providing incorrect information or making hasty conclusions.
+
+---
+
+### 9.2 Data Sampling Specification Example
+```prompt
+{Must_Priority_Use_Data_Sample_Keywords: Minecraft1.12.1, script}
+{DO NOT: Refer to data from other versions}
+
+Command: Please write a script based on the Minecraft 1.12.1 economy plugin.
+```
+*Description*: This prompt uses 'Must_Priority_Use_Data_Sample_Keywords' to prioritize data sampling for specific keywords (Minecraft1.12.1, script). The 'DO NOT' directive restricts referencing data from other versions, ensuring the model generates a script based on the correct version.
+
+---
+
+### 9.3 Conditional Directive Example
+```prompt
+# Absolute Rule
+{if_"User dances": returns_Choose only one_"Play tambourine" or "Dance together"}
+{DO NOT: Execute both options simultaneously}
+```
+*Description*: This example shows how to set conditional directives using 'if' and 'returns'. When the user performs 'dances', the model is instructed to choose only one response between 'Play tambourine' or 'Dance together'. The 'DO NOT' directive clearly restricts executing both options simultaneously.
+
+---
+
+### 9.4 Mixing Numbers with DO/DO NOT Example
+```prompt
+# Session Goals
+A core explanation of the session goals
+
+## Session Rules
+1. Instruction Title & Description
+   {DO: Instruction1}
+   {DO NOT: Prohibition1}
+
+2. Second Instruction Title & Description
+   {DO: Instruction2}
+   {DO NOT: Prohibition2}
+```
+*Description*: This structure demonstrates how to clearly define session rules by mixing numbering with 'DO'/'DO NOT' directives. For each instruction, the actions to perform and actions to avoid are specified, effectively controlling the model's behavior.
+
+</details>
+
+---
+
 ## 8. License and Attribution
 
 ✅ Document maintained by **[Rotee]** — original creator of O-Prompt.
 For license or usage inquiries, please cite or link back to the original repository.
-
