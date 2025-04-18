@@ -60,7 +60,6 @@ Use this as the top-level directive to ensure strict behavioral control over the
 | `Persona` | Role-based instruction anchor | ✅ |
 | `style` | Output texture control | ✅ |
 | `tone` | Emotional nuance | ✅ |
-| `Attention` | Focus priming signal | ✅ (partially model-dependent) |
 
 ---
 
@@ -104,13 +103,6 @@ Use this as the top-level directive to ensure strict behavioral control over the
 > {must do not: ...}
 > ```
 > → May confuse `do` with either `must` or `not`
-> 
-> ✅ Recommended:
-> ```
-> # Absolute Priority Rule
-> {DO NOT: ...}
-> ```
-
 ---
 
 ## 6. Experimental Keywords (Under Testing)
