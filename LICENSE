@@ -1,0 +1,27 @@
+# O‑Prompt License (OPL) — Version 1.0
+
+Copyright © 2025 Rotee. All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this prompt language specification and associated documentation files (the **“Prompt System”**), to deal in the Prompt System without restriction, including without limitation the rights to **use, copy, modify, merge, publish, distribute, sublicense, and/or sell** modified versions of the Prompt System, subject to the following conditions:
+
+## 1  Attribution
+The above copyright notice and this license shall be included in all copies or substantial portions of the Prompt System. Clear credit to **“Rotee — Creator of O‑Prompt”** must appear in any public or private use, distribution, or derivative work.
+
+## 2  Name & Identity Integrity
+The names **“O‑Prompt”**, **“O‑Prompt License (OPL)”**, and any related logos may **not** be used to endorse or promote derivative systems without prior written permission from Rotee. Modified versions must be **clearly distinguished** from the original and must not imply endorsement by, or affiliation with, Rotee unless such permission is granted.
+
+## 3  Preservation of License
+Redistributions of the Prompt System, in source or compiled form, shall retain this license text. Any derivative work that alters the structure, syntax, or terminology of O‑Prompt **may add additional terms** _provided that_ those terms do **not** remove or contradict Sections 1–3 of this license.
+
+## 4  Patent Status
+O‑Prompt is a language specification and conveys no patent claims. To the extent that any patentable elements arise from this specification, Rotee hereby grants a perpetual, worldwide, royalty‑free, non‑exclusive license to implement and use such elements within the scope of this license.
+
+## 5  Content Created with O‑Prompt
+This license governs the **structure and documentation** of O‑Prompt only. Prompts and creative works written _using_ the O‑Prompt language are the property of their respective authors and are **not** subject to this license.
+
+## 6  No Warranty
+THE PROMPT SYSTEM IS PROVIDED **“AS IS”**, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE PROMPT SYSTEM OR THE USE OR OTHER DEALINGS IN THE PROMPT SYSTEM.
+
+---
+_This license text was adapted in spirit from the Python Software Foundation License to preserve openness while safeguarding the identity and authorship of O‑Prompt._
+
