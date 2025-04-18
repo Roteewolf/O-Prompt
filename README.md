@@ -45,22 +45,20 @@ Use this as the top-level directive to ensure strict behavioral control over the
 
 ---
 
-## 3. Confirmed Effective Keywords
+| Keyword                         | Purpose                             | LLM Compatibility |
+|----------------------------------|--------------------------------------|--------------------|
+| `DO`                            | Include / enforce                    | ✅ Excellent |
+| `DO NOT`                        | Strict exclusion                     | ✅ Excellent (better than `NOT`) |
+| `MUST`                          | Hard requirement                     | ✅ |
+| `Use_Data_Sample_Keyword`       | sampling control; list-based input   | ✅ |
+| `Remember`                      | Contextual memory                    | ✅ |
+| `Output_Format`                 | Response structure control           | ✅ |
 
-| Keyword | Purpose | LLM Compatibility |
-|---------|---------|--------------------|
-| `DO` | Include / enforce | ✅ Excellent |
-| `DO NOT` | Strict exclusion | ✅ Excellent (better than `NOT`) |
-| `MUST` | Hard requirement | ✅ |
-| `Use_Data_Sample_Keyword` | sampling control; allows direct selection from internal examples and compact list-based control | ✅ |
-| `Remember` | Contextual memory | ✅ |
-| `Output_Format` | Response structure control | ✅ |
-| `if_`, `if_condition` | Conditional logic | ✅ |
-| `return_`, `return_if` | Logic result mapping | ✅ |
-| `Persona` | Role-based instruction anchor | ✅ |
-| `style` | Output texture control | ✅ |
-| `tone` | Emotional nuance | ✅ |
+| `if_` + `return_`               | Conditional logic & result binding   | ✅ Excellent |
 
+| `Persona`                       | Role-based instruction anchor        | ✅ |
+| `style`                         | Output texture control               | ✅ |
+| `tone`                          | Emotional nuance                     | ✅ |
 ---
 
 ## 4. Why These Keywords Work
