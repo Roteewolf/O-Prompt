@@ -202,6 +202,12 @@ A core explanation of the session goals
 
 ---
 
+## 📄 License
+
+This project is licensed under the **O-Prompt License (OPL)**.  
+Adapted in spirit from the Python Software Foundation License.  
+See the [LICENSE](./LICENSE) file for details.
+
 ## 8. License and Attribution
 
 ✅ Document maintained by **[Rotee]** — original creator of O-Prompt.
