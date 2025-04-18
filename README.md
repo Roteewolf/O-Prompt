@@ -213,4 +213,15 @@ Please cite or link back to this repository when referencing or redistributing a
 
 ➡️ See the full [LICENSE](./LICENSE) for legal terms and redistribution conditions.
 
+---
+
+If you found O‑Prompt valuable, or you believe in the philosophy behind it,  
+you can support the creator directly here:
+
+☕ Ko-fi: https://ko-fi.com/rotee  
+💸 PayPal: https://www.paypal.me/Roteewolf  
+
+Your support keeps this project — and me — alive. 💜
+
+
 
