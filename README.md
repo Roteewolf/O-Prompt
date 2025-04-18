@@ -218,7 +218,7 @@ Please cite or link back to this repository when referencing or redistributing a
 If you found O‑Prompt valuable, or you believe in the philosophy behind it,  
 you can support the creator directly here:
 
-☕ Ko-fi: https://ko-fi.com/rotee  
+☕ Ko-fi: https://ko-fi.com/Rotee  
 💸 PayPal: https://www.paypal.me/Roteewolf  
 
 Your support keeps this project — and me — alive. 💜
