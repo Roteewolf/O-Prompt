@@ -45,20 +45,20 @@ Use this as the top-level directive to ensure strict behavioral control over the
 
 ---
 
-| Keyword                         | Purpose                             | LLM Compatibility |
-|----------------------------------|--------------------------------------|--------------------|
-| `DO`                            | Include / enforce                    | ✅ Excellent |
-| `DO NOT`                        | Strict exclusion                     | ✅ Excellent (better than `NOT`) |
-| `MUST`                          | Hard requirement                     | ✅ |
-| `Use_Data_Sample_Keyword`       | sampling control; list-based input   | ✅ |
-| `Remember`                      | Contextual memory                    | ✅ |
-| `Output_Format`                 | Response structure control           | ✅ |
+| Keyword           | Purpose                                          | LLM Compatibility |
+|------------------|---------------------------------------------------|--------------------|
+| `DO`             | Include / enforce                                | ✅ Excellent |
+| `DO NOT`         | Strict exclusion                                 | ✅ Excellent (better than `NOT`) |
+| `MUST`           | Hard requirement                                 | ✅ |
+| `Use_Data_Sample_Keyword` | sampling control; list-based input     | ✅ |
+| `Remember`       | Contextual memory                                | ✅ |
+| `Output_Format`  | Response structure control                       | ✅ |
+| `if_`            | Conditional check (used with `return_`)          | ✅ Excellent |
+| `return_`        | Result mapping ← used with `if_`                 | ✅ Excellent |
+| `Persona`        | Role-based instruction anchor                    | ✅ |
+| `style`          | Output texture control                           | ✅ |
+| `tone`           | Emotional nuance                                 | ✅ |
 
-| `if_` + `return_`               | Conditional logic & result binding   | ✅ Excellent |
-
-| `Persona`                       | Role-based instruction anchor        | ✅ |
-| `style`                         | Output texture control               | ✅ |
-| `tone`                          | Emotional nuance                     | ✅ |
 ---
 
 ## 4. Why These Keywords Work
