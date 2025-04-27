@@ -67,11 +67,11 @@ There are two main types of conditional commands:
 
 | Syntax | Behavior |
 |--------|----------|
-| `{if_condition:Return_content}` | If the condition is satisfied, returns the specified **static output** immediately. |
+| `{if_condition:Return_"content"}` | If the condition is satisfied, returns the specified **static output** immediately. |
 | `{if_condition:DO_content}` | If the condition is satisfied, executes the specified **dynamic logic or internal operation**. |
 
 ### 🔹 Examples
-- `{if_user says 'I washed up':Return_Good job, you did well!}`  
+- `{if_user says 'I washed up':Return_"Good job, you did well!"}`  
   → When the user says "I washed up," it directly outputs "Good job, you did well!"
 
 - `{if_user says 'I washed up':DO_Change user state to 'clean'}`  
