@@ -60,6 +60,29 @@ Use this as the top-level directive to ensure strict behavioral control over the
 | `style`          | Output texture control                           | ✅ |
 | `tone`           | Emotional nuance                                 | ✅ |
 
+## 🌉 Conditional Command Rules
+
+O-Prompt supports conditional command structures that perform different actions based on given conditions.
+There are two main types of conditional commands:
+
+| Syntax | Behavior |
+|--------|----------|
+| `{if_condition:Return_content}` | If the condition is satisfied, returns the specified **static output** immediately. |
+| `{if_condition:DO_content}` | If the condition is satisfied, executes the specified **dynamic logic or internal operation**. |
+
+### 🔹 Examples
+- `{if_user says 'I washed up':Return_Good job, you did well!}`  
+  → When the user says "I washed up," it directly outputs "Good job, you did well!"
+
+- `{if_user says 'I washed up':DO_Change user state to 'clean'}`  
+  → When the user says "I washed up," it internally changes the user state to 'clean'.
+
+**Summary:**
+- `Return` → Static output for display
+- `DO` → Dynamic behavior or internal processing execution
+
+
+
 ---
 
 ## 4. Why These Keywords Work
