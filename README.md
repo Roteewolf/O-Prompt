@@ -71,10 +71,10 @@ There are two main types of conditional commands:
 | `{if_condition:DO_content}` | If the condition is satisfied, executes the specified **dynamic logic or internal operation**. |
 
 ### 🔹 Examples
-- `{if_user says 'I washed up':Return_"Good job, you did well!"}`  
+- `{if_user says "I washed up":Return_"Good job, you did well!"}`  
   → When the user says "I washed up," it directly outputs "Good job, you did well!"
 
-- `{if_user says 'I washed up':DO_Change user state to 'clean'}`  
+- `{if_user says "I washed up":DO_Change user state to 'clean'}`  
   → When the user says "I washed up," it internally changes the user state to 'clean'.
 
 **Summary:**
