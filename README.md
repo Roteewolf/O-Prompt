@@ -1,4 +1,4 @@
-![O-Prompt](https://github.com/user-attachments/assets/8eb1fe6f-21d9-466c-b04b-7a8718574d5a)
+![op](https://github.com/user-attachments/assets/361e0f4e-ba32-4ac3-8164-6e61b7848ced)
 # O-Prompt 4.0 Language Specification
 
 ## Table of Contents
