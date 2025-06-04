@@ -23,6 +23,7 @@
 
 ### What is O-Prompt?
 O-Prompt is a lightweight, LLM-focused prompt engineering language developed by Rotee. It is designed to optimize the clarity, efficiency, and expressiveness of prompts in a way that surpasses traditional systems like Markdown or JSON-based formats. Its purpose is to enable precise instruction of AI behavior through compact, modular, and semantically rich syntax.
+O-prompt is configured to work reliably across all models by exploiting common denominator learning data patterns across LLMs.
 
 ### Purpose & Philosophy
 The core philosophy behind O-Prompt is to simplify prompt construction while increasing its interpretability for AI models—especially for small and mid-size LLMs. Unlike most languages that avoid negatives, O-Prompt embraces `DO NOT` directives to increase clarity and control. Inspired by practices in image models like Stable Diffusion, O-Prompt allows for weighted attention, conditional logic, and explicit sampling guidance—all in human-readable form.
